@@ -2,28 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>90Million Coffee</title>
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
   <style>
     body { font-family: 'Inter', sans-serif; }
     h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    /* Prevent layout shift when mobile menu locks scroll */
+    html, body { height: 100%; }
   </style>
 </head>
 <body class="bg-white text-gray-900">
-  <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full flex items-center justify-between px-6 md:px-12 py-4 z-50 bg-black/40 backdrop-blur-sm">
-    <!-- Logo on Left -->
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full flex items-center justify-between px-4 md:px-12 py-3 z-50 bg-black/50 backdrop-blur-sm">
+    <!-- Logo (left) -->
     <a href="#" class="flex-shrink-0">
-      <img src="public/assets/logo.png" alt="90Million Coffee Logo" class="h-10 md:h-12">
+      <img src="public/assets/logo.png" alt="90Million Coffee Logo" class="h-9 md:h-12">
     </a>
 
-    <!-- Desktop Menu (centered) -->
+    <!-- Desktop menu (centered) -->
     <nav class="hidden md:flex flex-1 justify-center space-x-10 text-white font-sans">
       <a href="#" class="hover:text-amber-400">Home</a>
       <a href="#gallery" class="hover:text-amber-400">Gallery</a>
@@ -31,104 +37,126 @@
       <a href="#contact" class="hover:text-amber-400">Contact</a>
     </nav>
 
-    <!-- Hamburger Button (mobile only) -->
-    <button id="menu-btn" class="ml-auto flex flex-col space-y-1.5 focus:outline-none md:hidden" aria-label="Open menu">
+    <!-- Hamburger (mobile) -->
+    <button id="menu-btn"
+            class="ml-auto md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50"
+            aria-label="Open menu">
       <span class="block w-6 h-0.5 bg-white"></span>
-      <span class="block w-6 h-0.5 bg-white"></span>
+      <span class="block w-6 h-0.5 bg-white my-1.5"></span>
       <span class="block w-6 h-0.5 bg-white"></span>
     </button>
   </header>
 
-  <!-- Mobile Side Menu -->
-  <div id="menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 md:hidden">
-    <div class="flex justify-end p-4">
-      <button id="close-btn" class="text-gray-600 text-2xl" aria-label="Close menu">&times;</button>
-    </div>
-    <nav class="flex flex-col items-start px-6 space-y-4 mt-6">
-      <a href="#" class="text-lg text-gray-800 hover:text-amber-600">Home</a>
-      <a href="#gallery" class="text-lg text-gray-800 hover:text-amber-600">Gallery</a>
-      <a href="#careers" class="text-lg text-gray-800 hover:text-amber-600">Careers</a>
-      <a href="#contact" class="text-lg text-gray-800 hover:text-amber-600">Contact</a>
-    </nav>
-  </div>
+  <!-- Backdrop for mobile menu -->
+  <div id="backdrop" class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-200 z-40 md:hidden"></div>
 
-  <!-- Hero Section -->
+  <!-- Mobile Side Menu -->
+  <aside id="menu" class="fixed top-0 right-0 h-full w-72 max-w-[85%] bg-white shadow-xl transform translate-x-full transition-transform duration-300 z-50 md:hidden">
+    <div class="flex justify-end p-4">
+      <button id="close-btn" class="w-11 h-11 inline-flex items-center justify-center text-gray-700 text-2xl" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="flex flex-col items-start px-6 space-y-3 mt-2 text-lg">
+      <a href="#" class="py-2 w-full hover:text-amber-600">Home</a>
+      <a href="#gallery" class="py-2 w-full hover:text-amber-600">Gallery</a>
+      <a href="#careers" class="py-2 w-full hover:text-amber-600">Careers</a>
+      <a href="#contact" class="py-2 w-full hover:text-amber-600">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- HERO -->
   <section class="relative w-full pt-20">
-    <video autoplay muted loop playsinline preload="metadata" class="w-full h-[60vh] md:h-[90vh] object-cover brightness-75">
+    <!-- Mobile: poster image for instant paint -->
+    <img
+      src="public/assets/gallery/latte.jpg"
+      alt="90Million Coffee"
+      class="block md:hidden w-full h-[68vh] object-cover brightness-75"
+      loading="eager"
+    />
+
+    <!-- Desktop: autoplay video -->
+    <video autoplay muted loop playsinline preload="metadata"
+           class="hidden md:block w-full h-[90vh] object-cover brightness-75"
+           poster="public/assets/gallery/latte.jpg">
       <source src="public/assets/videos/coffee6.mp4" type="video/mp4">
     </video>
+
     <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-      <img src="public/assets/logo.png" class="h-28 sm:h-40 md:h-56 mx-auto mb-6" alt="90Million Coffee Logo" loading="lazy">
-      <p class="font-sans text-lg md:text-xl text-white/90 font-light tracking-wider">
+      <img src="public/assets/logo.png" class="h-24 sm:h-32 md:h-56 mx-auto mb-4 md:mb-6" alt="90Million Coffee Logo" loading="lazy">
+      <p class="font-sans text-base sm:text-lg md:text-xl text-white/90 font-light tracking-wider">
         Coffee • Croissants • Hot Chocolate
       </p>
     </div>
   </section>
 
-  <!-- Menu Section -->
-  <section id="gallery" class="py-16 px-6 md:px-16 bg-gray-50 text-center">
-    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Crafted With Passion</h2>
-    <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700 mb-12">
-      From buttery croissants to rich hot chocolate, every item is made to bring people closer. 
+  <!-- GALLERY / MENU -->
+  <section id="gallery" class="py-12 sm:py-14 md:py-16 px-4 sm:px-6 md:px-16 bg-gray-50 text-center">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Crafted With Passion</h2>
+    <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700 mb-8 sm:mb-12">
+      From buttery croissants to rich hot chocolate, every item is made to bring people closer.
       A menu that’s simple, but memorable.
     </p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <!-- Row 1 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
       <div class="rounded-xl shadow-lg overflow-hidden">
-        <img src="public/assets/gallery/croissant-stack.jpg" class="w-full h-52 sm:h-80 object-cover" alt="Croissant" loading="lazy">
+        <img src="public/assets/gallery/croissant-stack.jpg" class="w-full aspect-[4/3] object-cover" alt="Croissant" loading="lazy">
       </div>
       <div class="rounded-xl shadow-lg overflow-hidden">
-        <img src="public/assets/gallery/iced-pour.jpg" class="w-full h-52 sm:h-80 object-cover" alt="Coffee" loading="lazy">
+        <img src="public/assets/gallery/iced-pour.jpg" class="w-full aspect-[4/3] object-cover" alt="Coffee" loading="lazy">
       </div>
       <div class="rounded-xl shadow-lg overflow-hidden">
-        <img src="public/assets/gallery/iced-coffee.jpg" class="w-full h-20 sm:h-80 object-cover" alt="Hot Chocolate" loading="lazy">
+        <img src="public/assets/gallery/hotchocolate.jpg" class="w-full aspect-[4/3] object-cover" alt="Hot Chocolate" loading="lazy">
       </div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+    <!-- Row 2 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-6">
       <div class="rounded-xl shadow-lg overflow-hidden">
-        <img src="public/assets/gallery/matcha.jpg" class="w-full h-52 sm:h-80 object-cover" alt="Matcha" loading="lazy">
+        <img src="public/assets/gallery/matcha.jpg" class="w-full aspect-[4/3] object-cover" alt="Matcha" loading="lazy">
       </div>
       <div class="rounded-xl shadow-lg overflow-hidden">
-        <img src="public/assets/gallery/croissant-cut.jpg" class="w-full h-52 sm:h-80 object-cover" alt="Croissant cut" loading="lazy">
+        <img src="public/assets/gallery/croissant-cut.jpg" class="w-full aspect-[4/3] object-cover" alt="Croissant cut" loading="lazy">
       </div>
       <div class="rounded-xl shadow-lg overflow-hidden">
-        <img src="public/assets/gallery/latte.jpg" class="w-full h-20 sm:h-80 object-cover" alt="Latte" loading="lazy">
+        <img src="public/assets/gallery/latte.jpg" class="w-full aspect-[4/3] object-cover" alt="Latte" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- Featured Section -->
-  <section class="py-16 px-6 md:px-16 bg-white text-center">
-    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">A Space for Connection</h2>
+  <!-- FEATURED COPY -->
+  <section class="py-12 sm:py-14 md:py-16 px-4 sm:px-6 md:px-16 bg-white text-center">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">A Space for Connection</h2>
     <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700">
-      In a world that moves fast, we create pauses. Every croissant tells a story. Every cup holds a conversation. 
+      In a world that moves fast, we create pauses. Every croissant tells a story. Every cup holds a conversation.
       Every silence feels warm. This is more than coffee—it’s 90Million.
     </p>
   </section>
 
-  <!-- Careers Section -->
-  <section id="careers" class="relative h-[350px] sm:h-[450px] md:h-[550px] flex items-end justify-center overflow-hidden">
-    <video autoplay muted loop playsinline preload="metadata" class="absolute inset-0 w-full h-full object-cover brightness-50">
+  <!-- CAREERS -->
+  <section id="careers" class="relative flex items-end justify-center overflow-hidden h-[420px] sm:h-[480px] md:h-[550px]">
+    <!-- Mobile: still -->
+    <img src="public/assets/gallery/croissant-cut.jpg" alt="" class="block md:hidden absolute inset-0 w-full h-full object-cover brightness-60">
+    <!-- Desktop: video -->
+    <video autoplay muted loop playsinline preload="metadata"
+           class="hidden md:block absolute inset-0 w-full h-full object-cover brightness-50"
+           poster="public/assets/gallery/croissant-cut.jpg">
       <source src="public/assets/videos/careers6.mp4" type="video/mp4">
     </video>
-    <div class="relative z-10 text-center text-white mb-10 px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Join the Team</h2>
-      <p class="max-w-xl mx-auto text-sm sm:text-base md:text-lg mb-6">
-        We’re building more than a café. We’re building a culture. If you vibe with coffee, people, 
-        and good energy, we’d love to meet you.
+
+    <div class="relative z-10 text-center text-white mb-8 px-5 w-full max-w-2xl">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Join the Team</h2>
+      <p class="text-sm sm:text-base md:text-lg mb-4">
+        We’re building more than a café. We’re building a culture. If you vibe with coffee, people, and good energy, we’d love to meet you.
       </p>
       <a href="https://forms.gle/8EYwaHiqZ1cST98F6" target="_blank"
-         class="relative inline-block px-6 py-3 text-lg font-serif text-white rounded-2xl 
-                bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 
-                shadow-lg hover:scale-105 transition-transform">
+         class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 text-base md:text-lg font-serif text-white rounded-2xl bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 shadow-lg hover:scale-[1.02] transition-transform">
         Explore Careers
       </a>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-16 bg-gray-100 text-center">
+  <!-- CONTACT -->
+  <section id="contact" class="py-12 sm:py-14 md:py-16 px-4 sm:px-6 md:px-16 bg-gray-100 text-center">
     <h2 class="text-3xl font-medium mb-4">Contact Us</h2>
     <p class="mb-6">We’d love to hear from you! Reach out to us anytime.</p>
     <div class="space-y-3">
@@ -138,25 +166,56 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="bg-gray-100 text-center py-6 mt-10">
     <p class="text-gray-600 text-sm sm:text-base">© 2025 90Million Coffee. All rights reserved.</p>
   </footer>
 
-  <!-- Script -->
+  <!-- SCRIPTS -->
   <script>
+    // Mobile menu controls
+    const body = document.body;
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
     const closeBtn = document.getElementById('close-btn');
+    const backdrop = document.getElementById('backdrop');
 
-    menuBtn?.addEventListener('click', () => {
+    function openMenu() {
       menu.classList.remove('translate-x-full');
-      menu.classList.add('translate-x-0');
-    });
-
-    closeBtn?.addEventListener('click', () => {
-      menu.classList.remove('translate-x-0');
+      backdrop.classList.remove('pointer-events-none');
+      backdrop.classList.add('opacity-100');
+      body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
       menu.classList.add('translate-x-full');
+      backdrop.classList.add('pointer-events-none');
+      backdrop.classList.remove('opacity-100');
+      body.style.overflow = '';
+    }
+
+    menuBtn?.addEventListener('click', openMenu);
+    closeBtn?.addEventListener('click', closeMenu);
+    backdrop?.addEventListener('click', closeMenu);
+    document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', closeMenu));
+
+    // Broken image fallback + console log
+    const fallbackPlaceholder =
+      "data:image/svg+xml;charset=UTF-8," +
+      encodeURIComponent(`
+        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="300">
+          <rect width="100%" height="100%" fill="#e5e7eb"/>
+          <text x="50%" y="50%" font-size="20" text-anchor="middle" fill="#9ca3af" dy=".3em">
+            Image not found
+          </text>
+        </svg>
+      `);
+
+    document.querySelectorAll("img").forEach(img => {
+      img.addEventListener("error", () => {
+        console.warn("❌ Broken image:", img.src, "| alt:", img.alt);
+        img.src = fallbackPlaceholder;
+        img.classList.add("object-contain","bg-gray-100","p-4");
+      });
     });
   </script>
 </body>
