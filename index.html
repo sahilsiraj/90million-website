@@ -3,38 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>90Million Coffee</title>
 
-  <!-- Meta Description -->
-  <meta name="description" content="90Million Coffee in Kochi — specialty coffee with 100% Arabica beans from Lavazza, single-origin Indian brews, artisan croissants baked in-house, and rich single-origin hot chocolate. A space for connection.">
+  <!-- Primary Title (brand in caps + descriptor) -->
+  <title>90MILLION COFFEE — Specialty Café in Kochi | Croissants • Coffee • Hot Chocolate</title>
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="90Million Coffee — Specialty Café in Kochi">
-  <meta property="og:description" content="Coffee • Croissants • Hot Chocolate. Born from passion, brewed with purpose.">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://90million.in/">
+
+  <!-- FAVICONS -->
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#111827">
+
+  <!-- Meta Description (SEO-friendly, punchy) -->
+  <meta name="description" content="90Million Coffee — a premium specialty café in Kochi. 100% Arabica espresso, single-origin Indian brews, artisan croissants baked in-house, and rich single-origin hot chocolate. Visit us in Kaloor.">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:site_name" content="90MILLION COFFEE">
+  <meta property="og:title" content="90MILLION COFFEE — Specialty Café in Kochi">
+  <meta property="og:description" content="Croissants • Coffee • Hot Chocolate — artisan baking, carefully sourced beans, a place to pause.">
   <meta property="og:image" content="https://90million.in/public/assets/gallery/croissant-stack.jpg">
   <meta property="og:url" content="https://90million.in/">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
 
-  <!-- Twitter Card -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="90Million Coffee — Specialty Café in Kochi">
-  <meta name="twitter:description" content="Coffee • Croissants • Hot Chocolate. Born from passion, brewed with purpose.">
+  <meta name="twitter:title" content="90MILLION COFFEE — Specialty Café in Kochi">
+  <meta name="twitter:description" content="Croissants • Coffee • Hot Chocolate — artisan baking, carefully sourced beans, a place to pause.">
   <meta name="twitter:image" content="https://90million.in/public/assets/gallery/croissant-stack.jpg">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google / verification (if/when you add token) -->
+  <!-- <meta name="google-site-verification" content="PASTE_YOUR_TOKEN_HERE" /> -->
 
-  <!-- Google Fonts -->
+  <!-- Fonts & Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
     body { font-family: 'Inter', sans-serif; }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    h1,h2,h3 { font-family: 'Playfair Display', serif; }
     html, body { height: 100%; }
   </style>
+
+  <!-- JSON-LD structured data: Organization + Cafe -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://90million.in/#organisation",
+        "name": "90Million Coffee",
+        "url": "https://90million.in/",
+        "logo": "https://90million.in/public/assets/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/90millioncoffee",
+          "https://www.facebook.com/90millioncoffee"
+        ]
+      },
+      {
+        "@type": "CafeOrCoffeeShop",
+        "@id": "https://90million.in/#cafe",
+        "name": "90Million Coffee",
+        "image": "https://90million.in/public/assets/gallery/croissant-stack.jpg",
+        "url": "https://90million.in/",
+        "telephone": "+91 8848719090",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Kaloor",
+          "addressLocality": "Kochi",
+          "addressRegion": "Kerala",
+          "postalCode": "682017",
+          "addressCountry": "IN"
+        },
+        "servesCuisine": ["Coffee", "Bakery", "Hot Chocolate"],
+        "menu": "https://90million.in/menu",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "22:00"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Optional: sitemap hint (helps crawlers) -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://90million.in/sitemap.xml">
+
+  <!-- Small accessibility / SEO nicety -->
+  <meta name="robots" content="index, follow">
 </head>
+
 <body class="bg-white text-gray-900">
 
   <!-- NAVBAR -->
@@ -165,8 +233,10 @@
   <section id="croissants" class="py-16 px-6 md:px-16 bg-gray-50 text-center">
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Our Croissants</h2>
     <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700">
-      Not frozen. Not yesterday. Our croissants are rolled, layered, and baked fresh at our <strong>central kitchen</strong> every single day. 
-      <strong>Buttery, flaky, honeycombed</strong> perfection — the way they’re meant to be.
+      Croissants aren’t just pastries here — they’re a ritual.  
+      Made in-house at our <strong>central kitchen</strong>, rolled and baked by us — Sahil &amp; Shany —  
+      using a <strong>3-year-old sourdough starter</strong>. Slow-fermented, folded with care, baked golden.  
+      Tradition meeting obsession.
     </p>
   </section>
 
