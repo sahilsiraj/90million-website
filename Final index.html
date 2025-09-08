@@ -1,332 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="90Million Coffee in Kaloor, Kochi. Specialty coffee, artisan croissants, and luxurious hot chocolate. Opening September 2025.">
-<meta property="og:title" content="90Million Coffee">
-<meta property="og:description" content="Where every moment matters. Specialty Coffee • Artisan Croissants • Hot Chocolate">
-<meta property="og:image" content="public/assets/logo.png">
-<meta property="og:type" content="website">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>90Million Coffee</title>
-    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <style>
-        .font-serif { font-family: 'Cormorant Garamond', serif; }
-        .font-sans { font-family: 'Inter', sans-serif; }
-        
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .animate-fade-in-up {
-            animation: fadeInUp 1.2s ease-out forwards;
-        }
-        
-        .animate-fade-in {
-            animation: fadeIn 2s ease-out forwards;
-        }
-        
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        .glass-effect {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        .text-shadow {
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .image-overlay {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .image-overlay::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(0,0,0,0.1), transparent);
-            transition: opacity 0.3s ease;
-        }
-        
-        .image-overlay:hover::after {
-            opacity: 0;
-        }
-    </style>
+  <!-- Primary Title (brand in caps + descriptor) -->
+  <title>90MILLION COFFEE — Specialty Café in Kochi | Croissants • Coffee • Hot Chocolate</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://90million.in/">
+
+  <!-- FAVICONS -->
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#111827">
+
+  <!-- Meta Description (SEO-friendly, punchy) -->
+  <meta name="description" content="90Million Coffee — a premium specialty café in Kochi. 100% Arabica espresso, single-origin Indian brews, artisan croissants baked in-house, and rich single-origin hot chocolate. Visit us in Kaloor.">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:site_name" content="90MILLION COFFEE">
+  <meta property="og:title" content="90MILLION COFFEE — Specialty Café in Kochi">
+  <meta property="og:description" content="Croissants • Coffee • Hot Chocolate — artisan baking, carefully sourced beans, a place to pause.">
+  <meta property="og:image" content="https://90million.in/public/assets/gallery/croissant-stack.jpg">
+  <meta property="og:url" content="https://90million.in/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="90MILLION COFFEE — Specialty Café in Kochi">
+  <meta name="twitter:description" content="Croissants • Coffee • Hot Chocolate — artisan baking, carefully sourced beans, a place to pause.">
+  <meta name="twitter:image" content="https://90million.in/public/assets/gallery/croissant-stack.jpg">
+
+  <!-- Google / verification (if/when you add token) -->
+  <!-- <meta name="google-site-verification" content="PASTE_YOUR_TOKEN_HERE" /> -->
+
+  <!-- Fonts & Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1,h2,h3 { font-family: 'Playfair Display', serif; }
+    html, body { height: 100%; }
+  </style>
+
+  <!-- JSON-LD structured data: Organization + Cafe -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://90million.in/#organisation",
+        "name": "90Million Coffee",
+        "url": "https://90million.in/",
+        "logo": "https://90million.in/public/assets/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/90millioncoffee",
+          "https://www.facebook.com/90millioncoffee"
+        ]
+      },
+      {
+        "@type": "CafeOrCoffeeShop",
+        "@id": "https://90million.in/#cafe",
+        "name": "90Million Coffee",
+        "image": "https://90million.in/public/assets/gallery/croissant-stack.jpg",
+        "url": "https://90million.in/",
+        "telephone": "+91 8848719090",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Kaloor",
+          "addressLocality": "Kochi",
+          "addressRegion": "Kerala",
+          "postalCode": "682017",
+          "addressCountry": "IN"
+        },
+        "servesCuisine": ["Coffee", "Bakery", "Hot Chocolate"],
+        "menu": "https://90million.in/menu",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "22:00"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Optional: sitemap hint (helps crawlers) -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://90million.in/sitemap.xml">
+
+  <!-- Small accessibility / SEO nicety -->
+  <meta name="robots" content="index, follow">
 </head>
-<body class="bg-stone-50 text-stone-800 min-h-screen font-sans">
 
-    <!-- Navigation -->
-   <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-transparent text-white px-6 py-4 flex justify-between items-center">
+<body class="bg-white text-gray-900">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full flex items-center justify-between px-4 md:px-12 py-3 z-50 bg-black/50 backdrop-blur-sm">
     <!-- Logo -->
-    <div class="flex items-center space-x-2">
-        <img src="public/assets/logo.png" class="h-10" alt="90Million Coffee">
+    <a href="#" class="flex-shrink-0">
+      <img src="public/assets/logo.png" alt="90Million Coffee Logo" class="h-9 md:h-12">
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex flex-1 justify-center space-x-8 text-white font-sans">
+      <a href="#" class="hover:text-amber-400">Home</a>
+      <a href="#gallery" class="hover:text-amber-400">Gallery</a>
+      <a href="#about" class="hover:text-amber-400">About</a>
+      <a href="#careers" class="hover:text-amber-400">Careers</a>
+      <a href="#contact" class="hover:text-amber-400">Contact</a>
+    </nav>
+
+    <!-- Hamburger (mobile) -->
+    <button id="menu-btn"
+      class="ml-auto md:hidden flex flex-col items-center justify-center space-y-1.5 w-11 h-11 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50"
+      aria-label="Open menu">
+      <span class="block w-7 h-0.5 bg-white rounded"></span>
+      <span class="block w-7 h-0.5 bg-white rounded"></span>
+      <span class="block w-7 h-0.5 bg-white rounded"></span>
+    </button>
+  </header>
+
+  <!-- Backdrop for mobile menu -->
+  <div id="backdrop" class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-200 z-40 md:hidden"></div>
+
+  <!-- Mobile Side Menu -->
+  <aside id="menu" class="fixed top-0 right-0 h-full w-72 max-w-[85%] bg-white shadow-xl transform translate-x-full transition-transform duration-300 z-50 md:hidden overflow-y-auto">
+    <div class="flex justify-end p-4">
+      <button id="close-btn" class="w-11 h-11 inline-flex items-center justify-center text-gray-700 text-2xl" aria-label="Close menu">&times;</button>
     </div>
+    <nav class="flex flex-col items-start px-6 space-y-3 mt-2 text-lg">
+      <a href="#" class="py-2 w-full hover:text-amber-600">Home</a>
+      <a href="#gallery" class="py-2 w-full hover:text-amber-600">Gallery</a>
+      <a href="#about" class="py-2 w-full hover:text-amber-600">About</a>
+      <a href="#careers" class="py-2 w-full hover:text-amber-600">Careers</a>
+      <a href="#contact" class="py-2 w-full hover:text-amber-600">Contact</a>
+    </nav>
+  </aside>
 
-    <!-- Nav Links -->
-    <div class="flex space-x-6">
-        <a href="#home" class="hover:text-amber-400">Home</a>
-        <a href="#gallery" class="hover:text-amber-400">Gallery</a>
-        <a href="#menu" class="hover:text-amber-400">Menu</a>
-        <a href="#careers" class="hover:text-amber-400">Careers</a>
-</a>
-
-    </div>
-
-    <!-- CTA Buttons -->
-    <div class="flex space-x-4">
-        <a href="mailto:hello@90million.in" 
-   class="bg-stone-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-yellow-400 transition">
-  Contact Us
-        </a>
-    </div>
-</nav>
-
-<script>
-    // Change navbar background on scroll
-    window.addEventListener("scroll", () => {
-        const navbar = document.getElementById("navbar");
-        if (window.scrollY > 50) {
-            navbar.classList.remove("bg-transparent", "text-white");
-            navbar.classList.add("bg-stone-900", "text-stone-100");
-        } else {
-            navbar.classList.add("bg-transparent", "text-white");
-            navbar.classList.remove("bg-stone-900", "text-stone-100");
-        }
-    });
-</script>
-
-
-
-    <!-- Hero Section -->
-<section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
-  <div class="absolute inset-0 z-5">
-    <video autoplay muted loop playsinline class="w-full h-full object-cover">
+  <!-- HERO -->
+  <section class="relative w-full pt-20">
+    <img src="public/assets/gallery/latte.jpg" alt="90Million Coffee"
+         class="block md:hidden w-full h-[68vh] object-cover brightness-75" loading="eager" />
+    <video autoplay muted loop playsinline preload="metadata"
+           class="hidden md:block w-full h-[90vh] object-cover brightness-75"
+           poster="public/assets/gallery/latte.jpg">
       <source src="public/assets/videos/coffee6.mp4" type="video/mp4">
     </video>
-    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
-  </div>
-
-  <div class="relative text-center z-10 animate-fade-in-up px-6">
-    <img src="public/assets/logo.png" class="h-60 mr-3" alt="90Million Coffee">
-    </h1>
-    <p class="font-sans text-lg md:text-xl text-white/90 font-light tracking-wider">
-      Coffee • Croissants • Hot Chocolate
-    </p>
-  </div>
-</section>
-
-    <!-- Philosophy Section -->
-    <section class="py-20 bg-white"> 
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="font-serif text-4xl md:text-5xl font-light text-stone-800 mb-8 animate-fade-in">
-                A Space for Connection
-            </h2>
-            <p class="text-lg md:text-xl text-stone-600 font-light leading-relaxed max-w-2xl mx-auto animate-fade-in">
-                Here, life slows. Croissants crackle. Coffee steams. Conversations bloom. Even quiet speaks—and you’ll hear it
-            </p>
-        </div>
-    </section>
-
-    <!-- Featured Image Section -->
-    <section id="featured" class="relative w-full h-[500px] overflow-hidden">
-  <video autoplay loop muted playsinline class="w-full h-full object-cover">
-    <source src="public/assets/featured/featured6.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <!-- Overlay text (optional) -->
-  <div class="absolute inset-0 flex items-center justify-center bg-black/30">
-    <h1 class="text-white text-4xl md:text-6xl font-serif">Moments, crafted in crema</h1>
-  </div>
-</section>
-
-    <!-- Menu Showcase -->
-    <section id="menu" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="font-serif text-4xl md:text-5xl font-light text-center mb-20 text-stone-800">
-                Baked. Brewed. Beloved
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20">
-                <div class="image-overlay rounded-full overflow-hidden">
-                    <div class="image-overlay rounded-full overflow-hidden">
-    <video autoplay muted loop playsinline 
-           class="w-full h-80 object-cover transform hover:scale-105 transition-transform duration-700">
-        <source src="public/assets/videos/speciality.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
-                </div>
-                <div class="space-y-6">
-                    <h3 class="font-serif text-3xl font-light text-stone-800">Signature Beverages</h3>
-                    <p class="text-stone-600 font-light leading-relaxed">
-                        Each drink is a moment of mindfulness. From our carefully curated single-origin beans 
-                        to innovative seasonal creations that celebrate local flavors.
-                    </p>
-                    <div class="space-y-2 text-sm text-stone-500 font-light">
-                        <p>• Crafted Manual Brews</p>
-                        <p>• Seasonal Specialty Drinks</p>  
-                        <p>• 100% Arabica </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20">
-                <div class="space-y-6 order-2 md:order-1">
-                    <h3 class="font-serif text-3xl font-light text-stone-800">Artisan Breads and Pastries</h3>
-                    <p class="text-stone-600 font-light leading-relaxed">
-                        Every croissant is a work of art. Layers of buttery perfection, created using traditional French techniques 
-                        and the finest ingredients.
-                    </p>
-                    <div class="space-y-2 text-sm text-stone-500 font-light">
-                        <p>• Classic Butter Croissants</p>
-                        <p>• Chocolate & Almond Variations</p>
-                        <p>• Seasonal Signature Creations</p>
-                    </div>
-                </div>
-               <div class="image-overlay rounded-full overflow-hidden">
-    <video autoplay muted loop playsinline 
-           class="w-full h-80 object-cover transform hover:scale-105 transition-transform duration-700">
-        <source src="public/assets/videos/croissants.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
-            </div>
-            
-             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div class="image-overlay rounded-full overflow-hidden">
-    <video autoplay muted loop playsinline 
-           class="w-full h-80 object-cover transform hover:scale-105 transition-transform duration-700">
-        <source src="public/assets/videos/hotchocolate.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
-
-                <div class="space-y-6">
-                    <h3 class="font-serif text-3xl font-light text-stone-800">Artisan Hot Chocolate</h3>
-                    <p class="text-stone-600 font-light leading-relaxed">
-                        Our signature hot chocolate is a luxurious experience. Rich, velvety, and crafted with premium cocoa, 
-                        each cup is a warm embrace that defines comfort and indulgence.
-                    </p>
-                    <div class="space-y-2 text-sm text-stone-500 font-light">
-                        <p>• Premium Belgian Chocolate Base</p>
-                        <p>• Seasonal Spice Blends</p>
-                        <p>• Artisan Toppings & Garnishes</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-20 bg-white">
-  <div class="container mx-auto px-6">
-    <h2 class="text-4xl font-serif font-light text-center mb-12">Our Creations</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <img src="public/assets/gallery/matcha.jpg" alt="Iced Matcha Latte" class="rounded-xl shadow-lg object-cover h-80 w-full">
-      <img src="public/assets/gallery/iced-coffee.jpg" alt="Iced Coffee with Milk" class="rounded-xl shadow-lg object-cover h-80 w-full">
-      <img src="public/assets/gallery/latte.jpg" alt="Latte Art" class="rounded-xl shadow-lg object-cover h-80 w-full">
-      <img src="public/assets/gallery/iced-pour.jpg" alt="Pouring Milk into Iced Coffee" class="rounded-xl shadow-lg object-cover h-80 w-full">
-      <img src="public/assets/gallery/croissant-stack.jpg" alt="Stack of Almond Croissants" class="rounded-xl shadow-lg object-cover h-80 w-full">
-      <img src="public/assets/gallery/croissant-cut.jpg" alt="Cross-section Croissants" class="rounded-xl shadow-lg object-cover h-80 w-full">
-
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+      <img src="public/assets/logo.png" class="h-24 sm:h-32 md:h-56 mx-auto mb-4 md:mb-6" alt="90Million Coffee Logo" loading="lazy">
+      <p class="font-sans text-base sm:text-lg md:text-xl text-white/90 font-light tracking-wider">
+        Coffee • Croissants • Hot Chocolate
+      </p>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- GALLERY -->
+  <section id="gallery" class="py-12 sm:py-14 md:py-16 px-4 sm:px-6 md:px-16 bg-gray-50 text-center">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Crafted With Passion</h2>
+    <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700 mb-8 sm:mb-12">
+      From buttery croissants to rich hot chocolate, every item is made to bring people closer.
+      A menu that’s simple, but memorable.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+      <div class="rounded-xl shadow-lg overflow-hidden">
+        <img src="public/assets/gallery/croissant-stack.jpg" class="w-full aspect-[4/3] object-cover" alt="Croissant" loading="lazy">
+      </div>
+      <div class="rounded-xl shadow-lg overflow-hidden">
+        <img src="public/assets/gallery/iced-pour.jpg" class="w-full aspect-[4/3] object-cover" alt="Coffee" loading="lazy">
+      </div>
+      <div class="rounded-xl shadow-lg overflow-hidden">
+        <img src="public/assets/gallery/iced-coffee.jpg" class="w-full aspect-[4/3] object-cover" alt="Iced Coffee" loading="lazy">
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-6">
+      <div class="rounded-xl shadow-lg overflow-hidden">
+        <img src="public/assets/gallery/matcha.jpg" class="w-full aspect-[4/3] object-cover" alt="Matcha" loading="lazy">
+      </div>
+      <div class="rounded-xl shadow-lg overflow-hidden">
+        <img src="public/assets/gallery/croissant-cut.jpg" class="w-full aspect-[4/3] object-cover" alt="Croissant cut" loading="lazy">
+      </div>
+      <div class="rounded-xl shadow-lg overflow-hidden">
+        <img src="public/assets/gallery/latte.jpg" class="w-full aspect-[4/3] object-cover" alt="Latte" loading="lazy">
+      </div>
+    </div>
+  </section>
 
-    <!-- Coming Soon Section -->
-    <section class="py-32 px-6 bg-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="mb-12">
-                <img src="public/assets/logo.png" 
-                     class="h-20 mx-auto mb-8" 
-                     alt="90Million Coffee Logo">
-            </div>
-            
-            <h2 class="font-serif text-4xl md:text-5xl font-light mb-8 text-stone-800">
-                Join Our Story
-            </h2>
-            <p class="text-lg text-stone-600 font-light mb-12 max-w-2xl mx-auto">
-                Be among the first to experience our perfect trinity: exceptional coffee, artisan croissants, and luxurious hot chocolate. 
-                Sign up to receive updates about our opening and exclusive previews.
-            </p>
-            
-            <div class="space-y-4 mb-12">
-                <div class="text-stone-800">
-                    <p class="font-serif text-2xl font-light">September 2025</p>
-                    <p class="text-stone-600 font-light">Kaloor, Kochi, Kerala</p>
-                </div>
-            </div>
-            </section> 
+  <!-- FEATURED COPY -->
+  <section class="py-12 sm:py-14 md:py-16 px-4 sm:px-6 md:px-16 bg-white text-center">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">A Space for Connection</h2>
+    <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700">
+      In a world that moves fast, we create pauses. Every croissant tells a story. Every cup holds a conversation.
+      Every silence feels warm. This is more than coffee—it’s 90Million.
+    </p>
+  </section>
 
-      <!-- Careers Section -->
-<!-- Careers Section -->
-<section id="careers" class="relative h-[500px] flex items-end justify-center overflow-hidden">
-  <!-- Background video -->
-  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-    <source src="public/assets/videos/careers6.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <!-- ABOUT anchor -->
+  <div id="about" style="scroll-margin-top:96px;"></div>
 
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black/30"></div>
+  <!-- OUR COFFEE -->
+  <section id="coffee" class="py-16 px-6 md:px-16 bg-gray-50 text-center">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Our Coffee</h2>
+    <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700">
+      Espresso here is pure — built on <strong>100% Arabica beans from Lavazza, Italy</strong>.  
+      For manual brews, we go local: <strong>single-origin beans from India’s best estates</strong>,  
+      making every cup a quiet mission to support farmers and preserve India’s coffee heritage.
+    </p>
+  </section>
 
-  <!-- CTA Button -->
-  <div class="relative z-10 mb-10">
-    <a href="https://forms.gle/8EYwaHiqZ1cST98F6" target="_blank"
-       class="relative inline-block px-6 py-3 text-lg font-serif text-white rounded-2xl 
-              bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 
-              shadow-lg hover:scale-105 transition-transform">
-      Explore Careers at 90Million →
-    </a>
-  </div>
-</section>
+  <!-- OUR HOT CHOCOLATE -->
+  <section id="hotchocolate" class="py-16 px-6 md:px-16 bg-white text-center">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Our Hot Chocolate</h2>
+    <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700">
+      More than comfort — it’s craft.  
+      Our hot chocolate is made with <strong>single-origin cacao</strong>,  
+      whisked into rich, velvety cups that carry the story of the farms they come from.  
+      It’s indulgence done right — pure, deep, and unforgettable.
+    </p>
+  </section>
 
+  <!-- OUR CROISSANTS -->
+  <section id="croissants" class="py-16 px-6 md:px-16 bg-gray-50 text-center">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Our Croissants</h2>
+    <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700">
+      Croissants aren’t just pastries here — they’re a ritual.  
+      Made in-house at our <strong>central kitchen</strong>, rolled and baked by us — Sahil &amp; Shany —  
+      using a <strong>3-year-old sourdough starter</strong>. Slow-fermented, folded with care, baked golden.  
+      Tradition meeting obsession.
+    </p>
+  </section>
 
-    <section id="contact" class="py-16 bg-gray-100 text-center">
-  <h2 class="text-3xl font-medium mb-4">Contact Us</h2>
-  <p class="mb-6">We’d love to hear from you! Reach out to us anytime.</p>
-  
-  <div class="space-y-3">
-    <p>Email: <a href="mailto:hello@90million.in" class="text-amber-600">hello@90million.in</a></p>
-    <p>Phone: <a href="tel:+919876543210" class="text-amber-600">+91 8848719090</a></p>
-    <p>Location: Kaloor, Kochi</p>
-  </div>
-</section>
-<!-- Footer -->
-    <footer class="bg-stone-900 text-stone-400 py-16 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-    <div class="relative text-center z-10 animate-fade-in-up px-6 flex justify-center">
-      <img src="public/assets/logo.png" class="h-20" alt="90Million Coffee"></div>
-<p class="font-light mb-8"></p>
-            
-            <p class="text-xs font-light text-stone-500">
-                &copy; 2025 90Million India | Designed by Sahil
-            </p>
-        </div>
-    </footer>
+  <!-- SUSTAINABILITY -->
+  <section id="sustainability" class="py-16 px-6 md:px-16 bg-white text-center">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Sustainability</h2>
+    <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700">
+      We don’t “minimize” plastic. We don’t use it — period.  
+      From <strong>cornstarch straws</strong> to paper-first packaging,  
+      sustainability is baked into every detail — just like butter in our croissants.  
+      Cafés should nourish, not pollute.
+    </p>
+  </section>
+
+  <!-- THE 90MILLION WAY -->
+  <section id="the90mway" class="py-16 px-6 md:px-16 bg-gray-50 text-center">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">The 90Million Way</h2>
+    <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700">
+      We’re not chasing trends. We’re building a space that lasts.  
+      A place where you can <strong>drink better, eat better, live better</strong>.  
+      A space for conversations, pauses, and possibilities.  
+      This is what 90Million is about — timeless, thoughtful, and true.
+    </p>
+  </section>
+
+  <!-- CAREERS -->
+  <section id="careers" class="relative flex items-end justify-center overflow-hidden h-[420px] sm:h-[480px] md:h-[550px]">
+    <img src="public/assets/gallery/croissant-cut.jpg" alt="" class="block md:hidden absolute inset-0 w-full h-full object-cover brightness-60">
+    <video autoplay muted loop playsinline preload="metadata"
+           class="hidden md:block absolute inset-0 w-full h-full object-cover brightness-50"
+           poster="public/assets/gallery/croissant-cut.jpg">
+      <source src="public/assets/videos/careers6.mp4" type="video/mp4">
+    </video>
+    <div class="relative z-10 text-center text-white mb-8 px-5 w-full max-w-2xl">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Join the Team</h2>
+      <p class="text-sm sm:text-base md:text-lg font-serif mb-4">
+        We’re building more than a café. We’re building a culture. If you vibe with coffee, people, and good energy, we’d love to meet you.
+      </p>
+      <a href="https://forms.gle/8EYwaHiqZ1cST98F6" target="_blank"
+         class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 text-base md:text-lg font-serif text-white rounded-2xl bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 shadow-lg hover:scale-[1.02] transition-transform">
+        Explore Careers
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-12 sm:py-14 md:py-16 px-4 sm:px-6 md:px-16 bg-gray-100 text-center">
+    <h2 class="text-3xl font-medium mb-4">Contact Us</h2>
+    <p class="mb-6">We’d love to hear from you! Reach out to us anytime.</p>
+    <div class="space-y-3">
+     <p>Email: <a href="mailto:hello@90million.in" class="text-amber-600">hello@90million.in</a></p>
+      <p>Phone: <a href="tel:+918848719090" class="text-amber-600">+91 8848719090</a></p>
+  <p><a href="https://wa.me/918848719090" target="_blank" class="text-amber-600">Chat on WhatsApp</a></p>
+  <p><a href="https://instagram.90million.in" target="_blank" class="text-amber-600">Follow us on Instagram</a></p>
+      <p>Location: Kaloor, Kochi</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-100 text-center py-6 mt-10">
+    <p class="text-gray-600 text-sm sm:text-base">© 2025 90Million Coffee. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const body = document.body;
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const closeBtn = document.getElementById('close-btn');
+    const backdrop = document.getElementById('backdrop');
+
+    function openMenu() {
+      menu.classList.remove('translate-x-full');
+      backdrop.classList.remove('pointer-events-none');
+      backdrop.classList.add('opacity-100');
+      body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      menu.classList.add('translate-x-full');
+      backdrop.classList.add('pointer-events-none');
+      backdrop.classList.remove('opacity-100');
+      body.style.overflow = '';
+    }
+
+    menuBtn?.addEventListener('click', openMenu);
+    closeBtn?.addEventListener('click', closeMenu);
+    backdrop?.addEventListener('click', closeMenu);
+    document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', closeMenu));
+  </script>
 </body>
 </html>
