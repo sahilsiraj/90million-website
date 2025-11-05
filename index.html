@@ -8,11 +8,11 @@
   <title>90MILLION COFFEE — Specialty Café in Kochi | Croissants • Coffee • Hot Chocolate</title>
 
   <!-- Canonical -->
-  <link rel="canonical" href="90Million Coffee">
+  <link rel="canonical" href="https://90million.in/">
 
   <!-- FAVICONS -->
-  <link rel="icon" href="public/assets/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="public/assets/apple-touch-icon.png">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#111827">
 
   <!-- Meta Description (SEO-friendly, punchy) -->
@@ -107,29 +107,41 @@
 
   <!-- NAVBAR -->
   <header class="fixed top-0 left-0 w-full flex items-center justify-between px-4 md:px-12 py-3 z-50 bg-black/50 backdrop-blur-sm">
-    <!-- Logo -->
-    <a href="#" class="flex-shrink-0">
-      <img src="public/assets/logo.png" alt="90Million Coffee Logo" class="h-9 md:h-12">
+  <!-- Logo -->
+  <a href="#" class="flex-shrink-0">
+    <img src="public/assets/logo.png" alt="90Million Coffee Logo" class="h-9 md:h-12">
+  </a>
+
+  <!-- Desktop nav -->
+  <nav class="hidden md:flex flex-1 justify-center space-x-8 text-white font-sans">
+    <a href="#" class="hover:text-amber-400">Home</a>
+    <a href="#gallery" class="hover:text-amber-400">Gallery</a>
+    <a href="#about" class="hover:text-amber-400">About</a>
+    <a href="#careers" class="hover:text-amber-400">Careers</a>
+    <a href="#contact" class="hover:text-amber-400">Contact</a>
+  </nav>
+
+  <!-- Phone number (desktop only) -->
+  <div class="hidden md:flex items-center space-x-2 text-white font-medium">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-.59 1.41l-1.42 1.42a16.018 16.018 0 006.36 6.36l1.42-1.42A2 2 0 0115 15h2a2 2 0 012 2v2a2 2 0 01-2 2h-1C9.477 21 3 14.523 3 7V5z" />
+    </svg>
+    <a href="tel:+918848719090" class="hover:text-amber-400 transition-colors">
+      +91&nbsp;88487&nbsp;19090
     </a>
+  </div>
 
-    <!-- Desktop nav -->
-    <nav class="hidden md:flex flex-1 justify-center space-x-8 text-white font-sans">
-      <a href="#" class="hover:text-amber-400">Home</a>
-      <a href="#gallery" class="hover:text-amber-400">Gallery</a>
-      <a href="#about" class="hover:text-amber-400">About</a>
-      <a href="#careers" class="hover:text-amber-400">Careers</a>
-      <a href="#contact" class="hover:text-amber-400">Contact</a>
-    </nav>
+  <!-- Hamburger (mobile) -->
+  <button id="menu-btn"
+    class="ml-auto md:hidden flex flex-col items-center justify-center space-y-1.5 w-11 h-11 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50"
+    aria-label="Open menu">
+    <span class="block w-7 h-0.5 bg-white rounded"></span>
+    <span class="block w-7 h-0.5 bg-white rounded"></span>
+    <span class="block w-7 h-0.5 bg-white rounded"></span>
+  </button>
+</header>
 
-    <!-- Hamburger (mobile) -->
-    <button id="menu-btn"
-      class="ml-auto md:hidden flex flex-col items-center justify-center space-y-1.5 w-11 h-11 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50"
-      aria-label="Open menu">
-      <span class="block w-7 h-0.5 bg-white rounded"></span>
-      <span class="block w-7 h-0.5 bg-white rounded"></span>
-      <span class="block w-7 h-0.5 bg-white rounded"></span>
-    </button>
-  </header>
 
   <!-- Backdrop for mobile menu -->
   <div id="backdrop" class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-200 z-40 md:hidden"></div>
@@ -212,7 +224,7 @@
   <section id="coffee" class="py-16 px-6 md:px-16 bg-gray-50 text-center">
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Our Coffee</h2>
     <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700">
-      Espresso here is pure — built on <strong>100% Arabica beans from Chikkamagaluru</strong>.  
+      Espresso here is pure — built on <strong>100% Arabica beans from Lavazza, Italy</strong>.  
       For manual brews, we go local: <strong>single-origin beans from India’s best estates</strong>,  
       making every cup a quiet mission to support farmers and preserve India’s coffee heritage.
     </p>
@@ -235,7 +247,7 @@
     <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700">
       Croissants aren’t just pastries here — they’re a ritual.  
       Made in-house at our <strong>central kitchen</strong>, rolled and baked by us — Sahil &amp; Shany —  
-      Slow-fermented, folded with care, baked golden.  
+      folded with care, baked golden.  
       Tradition meeting obsession.
     </p>
   </section>
@@ -244,7 +256,7 @@
   <section id="sustainability" class="py-16 px-6 md:px-16 bg-white text-center">
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Sustainability</h2>
     <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700">
-      We don’t “minimize” plastic. We mostly don’t use it — period.  
+      We don’t “minimize” plastic. We don’t use it — period.  
       From <strong>cornstarch straws</strong> to paper-first packaging,  
       sustainability is baked into every detail — just like butter in our croissants.  
       Cafés should nourish, not pollute.
